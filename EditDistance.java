@@ -8,19 +8,22 @@ public class EditDistance {
 
         for(int i=0; i<=m; i++){
             for(int j=0; j<=n; j++){
-                if(i==0 || j==0)
-                    C[i][j] = 0;
+                if(i==0)
+                    C[i][j] = j;
+                else if(j==0)
+                    C[i][j] = i;
                 else{
                     if(str1[i-1] == str2[j-1]){
-                        C[i][j] = C[i-1][j-1] + 1;
+                        C[i][j] = C[i-1][j-1];
                     }
                     else{
-                        C[i][j] = Math.max(C[i-1][j], C[i][j-1]);
+                        int temp = Math.min(C[i-1][j], C[i][j-1]);
+                        C[i][j] = Math.min(temp, C[i-1][j-1]) + 1;
                     }
                 }
             }
         }
-        return str2.length - C[m][n]; //O(m*n)
+        return C[m][n]; //O(m*n)
     }
     public static void main(String[] args){
         char[] str1 = {'g','e','e','k'};
