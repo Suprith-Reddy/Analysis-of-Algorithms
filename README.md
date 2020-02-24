@@ -2,6 +2,6 @@
  Problems of AOA
  
  Edit Distance DP - Recursive Formulation
- C[i][j] = C[i-1][j-1]+1 if str1[i-1] == str2[j-1] ; max(C[i-1][j], C[i][j-1]) otherwise
+ C[i][j] = C[i-1][j-1] if str1[i-1] == str2[j-1] ; min(C[i-1][j], C[i][j-1], C[i-1][j-1]) otherwise
  
- Result -> str2.length - C[m][n]
+ Result -> C[m][n]
