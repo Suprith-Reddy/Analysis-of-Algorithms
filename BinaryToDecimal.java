@@ -5,7 +5,8 @@ public class BinaryToDecimal {
         System.out.println(bin); //11001
         System.out.println(dec); //25
     }
-
+    
+    //Assuming bin to be the valid input, ignored all validility checks...
     private static int binToDec(String bin) {
         int len = bin.length()-1;
         int output = 0;
