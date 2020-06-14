@@ -1,6 +1,5 @@
 import java.util.*;
 
-/* THIS DOESN'T WORK ON LEETCODE THOUGH, STRANGE!!!!! */
 
 public class HashMapSortByValue {
     public static void main(String[] args) {
