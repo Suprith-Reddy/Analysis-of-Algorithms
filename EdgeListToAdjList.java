@@ -7,9 +7,10 @@ class GraphList{
 public class EdgeListToAdjList {
     public static void main(String[] args) {
         int[][] edges = {{0, 1}, {1, 2}, {3, 4}};
-
-        GraphList[] gl = new GraphList[5];
-        for(int i=0;i<5;i++){
+        int n = 5; //# of nodes
+        
+        GraphList[] gl = new GraphList[n];
+        for(int i=0;i<n;i++){
             gl[i] = new GraphList();
         }
 
