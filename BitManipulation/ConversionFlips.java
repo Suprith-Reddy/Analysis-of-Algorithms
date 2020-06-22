@@ -1,4 +1,5 @@
 public class ConversionFlips {
+    /* Problem 5.6 CTCI */
     public static void main(String[] args) {
         int A = 29; //11101
         int B = 15; //01111
