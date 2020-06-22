@@ -3,7 +3,8 @@ public class FlipBitToLongest1s {
     public static void main(String[] args) {
         int num = 1775; //11011101111
         int max = Integer.MIN_VALUE;
-        int len = Integer.toBinaryString(num).length();
+        //int len = Integer.toBinaryString(num).length();
+        int len = (int) (Math.log(num)/Math.log(2) + 1); // takes log(n) time
         int count = 0, first, next = 0;
 
         for (int i=0; i<len; i++){
