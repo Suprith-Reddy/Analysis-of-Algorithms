@@ -4,15 +4,12 @@ public class ConversionFlips {
         int A = 29; //11101
         int B = 15; //01111
         int flips = 0;
-        int len;
-        if(A>B)
-            len = getLen(A);
-        else
-            len = getLen(B);
+
+        int res = A ^ B; //XOR operation
+        int len = getLen(res);
+
         for(int i=0;i<len;i++){
-            int bitA = getBit(A, i);
-            int bitB = getBit(B, i);
-            if(bitA != bitB)
+            if(getBit(res, i) != 0)
                 flips++;
         }
         System.out.println(flips); //2
